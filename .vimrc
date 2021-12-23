@@ -16,6 +16,9 @@ Plug 'christoomey/vim-tmux-navigator'
 
 Plug 'morhetz/gruvbox'
 
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
 Plug 'HerringtonDarkholme/yats.vim' " TS Syntax
 
 " Initialize plugin system
