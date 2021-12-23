@@ -5,6 +5,7 @@
 1. If you want to use any one or few of my configuration, you can download them by opening the files and downloading them individually. 
 2. If you want to use all my configurations, you can download all files using the download button at the top. Use `.tar`, `.tar.gz` or `tar.bz2` if you are on **Linux** or **Mac** and `.zip` if you are on **Windows** systems.
 **Note:** Most config files are for Linux and Unix only.
+{: .note}
 
 ## Use and track all the changes you make.
 
