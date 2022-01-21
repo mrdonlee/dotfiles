@@ -20,6 +20,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 Plug 'HerringtonDarkholme/yats.vim' " TS Syntax
+Plug 'kristijanhusak/vim-carbon-now-sh' "Share code snippets
 
 " Initialize plugin system
 call plug#end()
@@ -29,17 +30,17 @@ set cursorline
 set number
 set smarttab
 set cindent
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 " always uses spaces instead of tab characters
 set expandtab
 set background=dark
 colorscheme gruvbox
 
-let NERDTreeShowHidden=1
+let NERDTreeShowHidden=0
 
-let g:NERDTreeGitStatusWithFlags = 1
-let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+let g:NERDTreeGitStatusWithFlags = 0
+let g:WebDevIconsUnicodeDecorateFolderNodes = 0
 let g:NERDTreeGitStatusNodeColorization = 1
 "let g:NERDTreeColorMapCustom = {
     ""\ "Staged"    : "#0ee375",  
