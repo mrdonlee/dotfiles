@@ -32,7 +32,7 @@ rm -Rf temp-files
 ```
  alias dotgit='git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 ```
-5. Tell Git not to displat untracked files.
+5. Tell Git not to display untracked files.
 ```
  dotgit config status.showUntrackedFiles no
 ```
