@@ -30,8 +30,12 @@ set cursorline
 set number
 set smarttab
 set cindent
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
+
+" Split will open to the right or bottom
+set splitright
+set splitbelow
 " always uses spaces instead of tab characters
 set expandtab
 set background=dark
