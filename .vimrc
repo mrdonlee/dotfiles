@@ -10,6 +10,9 @@
 " BASIC SETUP:
 "-----------------------------------------------
 
+" Enable line number.
+set nu
+
 " Enter current millenium.
 set nocompatible
 
