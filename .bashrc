@@ -123,4 +123,5 @@ function _update_ps1() {
 if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
     PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 fi
- alias dotgit='git --git-dir=/home/mrdonlee/dotfiles/ --work-tree=/home/mrdonlee
+
+alias dotgit='git --git-dir=/home/mrdonlee/dotfiles/ --work-tree=/home/mrdonlee'
