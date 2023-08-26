@@ -10,6 +10,16 @@
 " BASIC SETUP:
 "-----------------------------------------------
 
+set cursorline
+set smarttab
+set cindent
+set tabstop=4
+set shiftwidth=4
+
+set splitright
+set splitbelow
+set background=dark
+colorscheme desert
 " Enable line number.
 set nu
 
