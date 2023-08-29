@@ -3,7 +3,7 @@
 ## How to use my configurations?
 
 1. If you want to use any one or few of my configuration, you can download them by opening the files and downloading them individually. 
-2. If you want to use all my configurations, you can download all files using the download button at the top. Use `.tar`, `.tar.gz` or `tar.bz2` if you are on **Linux** or **Mac** and `.zip` if you are on **Windows** systems.
+2. If you want to use all my configurations, you can download all files using the download button at the top. Use `.tar`, `.tar.gz` or `.tar.bz2` if you are on **Linux** or **Mac** and `.zip` if you are on **Windows** systems.
 
 **Note:** Most config files are for Linux and Unix only.
 
@@ -17,7 +17,7 @@ This was inspired by **Greg Owen**'s [post](https://stegosaurusdormant.com/bare-
 To download and use the dotfiles, follow the steps below.
 
 1. Clone the repo into you system as a bare repository. You will also need a non-bare repository for the dotfiles.
-```
+```bash
 git clone --separate-git-dir=$HOME/dotfiles https://gitlab.com/mrdonlee/dotfiles.git temp-files
 ```
 2. Copy the dotfiles from `temp-files` directory to`$HOME` directory.
@@ -41,7 +41,7 @@ rm -Rf temp-files
  dotgit remote add gitlab https://gitlab.com/mrdonlee/dotfiles.git
 ```
 7. Whenever you want to add a new config file to the repo. Add using the commands below.
-```
+```bash
 dotgit add ~/.gitconfig
 dotgit commit -m "Git dotfiles"
 dotgit push gitlab main
