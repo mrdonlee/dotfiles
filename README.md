@@ -21,23 +21,23 @@ To download and use the dotfiles, follow the steps below.
 git clone --separate-git-dir=$HOME/dotfiles https://gitlab.com/mrdonlee/dotfiles.git temp-files
 ```
 2. Copy the dotfiles from `temp-files` directory to`$HOME` directory.
-```
+```bash
 rsync --recursive --verbose --exclude '.git' temp-files/ $HOME/
 ```
 3. Remove temporary directory.
-```
+```bash
 rm -Rf temp-files
 ```
 4. Create an alias for assigning `$HOME` directory as the working tree and `$HOME/dotfiles` directory as the repository.
-```
+```bash
  alias dotgit='git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 ```
 5. Tell Git not to display untracked files.
-```
+```bash
  dotgit config status.showUntrackedFiles no
 ```
 6. Setup a remote repo to sync dotfiles.
-```
+```bash
  dotgit remote add gitlab https://gitlab.com/mrdonlee/dotfiles.git
 ```
 7. Whenever you want to add a new config file to the repo. Add using the commands below.
