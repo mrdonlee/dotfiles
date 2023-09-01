@@ -27,6 +27,9 @@
  ;; If there is more than one, they won't work right.
  )
 
+;; Enable rainbow delimiter
+(add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
+
 (scroll-bar-mode -1) ; Disable scrollbar
 (tool-bar-mode -1) ; Disable toolbar
 (menu-bar-mode -1) ; Disable menu bar
