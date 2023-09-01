@@ -42,3 +42,12 @@
 
 ;; Disable line number for some modes
 
+;; Download LSP
+(unless (package-installed-p 'lsp-mode)
+  (package-install 'lsp-mode))
+
+;; Enable LSP
+(setq lsp-keymap-prefix "C-c l")
+
+(require 'lsp-mode)
+(add-hook 'prog-mode-hook #'lsp-deferred)
