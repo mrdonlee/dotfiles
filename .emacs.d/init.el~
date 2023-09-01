@@ -19,7 +19,7 @@
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
    '("b1a691bb67bd8bd85b76998caf2386c9a7b2ac98a116534071364ed6489b695d" "2ff9ac386eac4dffd77a33e93b0c8236bb376c5a5df62e36d4bfa821d56e4e20" "d80952c58cf1b06d936b1392c38230b74ae1a2a6729594770762dc0779ac66b7" default))
- '(package-selected-packages '(rainbow-delimiters gruvbox-theme evil)))
+ '(package-selected-packages '(lsp-java lsp-mode rainbow-delimiters gruvbox-theme evil)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -41,6 +41,9 @@
 (global-display-line-numbers-mode t)
 
 ;; Disable line number for some modes
+
+;; Global highlight current line
+(global-hl-line-mode +1)
 
 ;; Download LSP
 (unless (package-installed-p 'lsp-mode)
