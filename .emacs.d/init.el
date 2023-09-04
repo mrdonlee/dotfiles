@@ -30,7 +30,7 @@
  '(custom-safe-themes
    '("b1a691bb67bd8bd85b76998caf2386c9a7b2ac98a116534071364ed6489b695d" "2ff9ac386eac4dffd77a33e93b0c8236bb376c5a5df62e36d4bfa821d56e4e20" "d80952c58cf1b06d936b1392c38230b74ae1a2a6729594770762dc0779ac66b7" default))
  '(package-selected-packages
-   '(lsp-javacomp use-package ## lsp-java lsp-mode rainbow-delimiters gruvbox-theme evil)))
+   '(company lsp-javacomp use-package ## lsp-java lsp-mode rainbow-delimiters gruvbox-theme evil)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -62,7 +62,18 @@
   :init
   (setq lsp-keymap-prefix "C-c l")  ;; Or 'C-l', 's-l'
   :hook (lsp-mode . efs/lsp-mode-setup)
-	(prog-mode-hook . lsp-deferred)
+	(prog-mode . lsp-deferred)
 	(lsp-mode . lsp-enable-which-key-integration))
 
 (add-hook 'prog-mode-hook #'lsp-deferred)
+
+(use-package company
+  :after lsp-mode
+  :hook (lsp-mode . company-mode)
+  :bind (:map company-active-map
+         ("<tab>" . company-complete-selection))
+        (:map lsp-mode-map
+         ("<tab>" . company-indent-or-complete-common))
+  :custom
+  (company-minimum-prefix-length 1)
+  (company-idle-delay 0.0))
