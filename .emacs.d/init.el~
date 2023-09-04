@@ -67,8 +67,6 @@
 
 (add-hook 'prog-mode-hook #'lsp-deferred)
 
-;;(use-package lsp-java)
-
 (use-package company
   :after lsp-mode
   :hook (lsp-mode . company-mode)
