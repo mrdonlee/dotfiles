@@ -67,13 +67,20 @@
 
 (add-hook 'prog-mode-hook #'lsp-deferred)
 
+;; Enable company mode for code completion
 (use-package company
   :after lsp-mode
   :hook (lsp-mode . company-mode)
   :bind (:map company-active-map
          ("<tab>" . company-complete-selection))
+	("C-<tab>" . company-complete)
         (:map lsp-mode-map
          ("<tab>" . company-indent-or-complete-common))
   :custom
   (company-minimum-prefix-length 1)
   (company-idle-delay 0.0))
+
+;; Enable flycheck for error checking
+(use-package flycheck
+  :ensure t
+  :init (global-flycheck-mode))
