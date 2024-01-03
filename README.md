@@ -34,15 +34,15 @@ rm -Rf temp-files
 ```
 4. Create an alias for assigning `$HOME` directory as the working tree and `$HOME/dotfiles` directory as the repository.
 ```bash
- alias dotgit='git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
+alias dotgit='git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 ```
 5. Tell Git not to display untracked files.
 ```bash
- dotgit config status.showUntrackedFiles no
+dotgit config status.showUntrackedFiles no
 ```
 6. Setup a remote repo to sync dotfiles.
 ```bash
- dotgit remote add gitlab https://gitlab.com/mrdonlee/dotfiles.git
+dotgit remote add gitlab https://gitlab.com/mrdonlee/dotfiles.git
 ```
 If using SSH (recommended)
 ```bash
