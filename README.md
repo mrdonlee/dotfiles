@@ -20,6 +20,10 @@ To download and use the dotfiles, follow the steps below.
 ```bash
 git clone --separate-git-dir=$HOME/dotfiles https://gitlab.com/mrdonlee/dotfiles.git temp-files
 ```
+If using SSH (recommended)
+```bash
+git clone --separate-git-dir=$HOME/dotfiles git@gitlab.com:mrdonlee/dotfiles.git temp-files
+```
 2. Copy the dotfiles from `temp-files` directory to`$HOME` directory.
 ```bash
 rsync --recursive --verbose --exclude '.git' temp-files/ $HOME/
@@ -39,6 +43,10 @@ rm -Rf temp-files
 6. Setup a remote repo to sync dotfiles.
 ```bash
  dotgit remote add gitlab https://gitlab.com/mrdonlee/dotfiles.git
+```
+If using SSH (recommended)
+```bash
+dotgit remote add gitlab git@gitlab.com:mrdonlee/dotfiles.git
 ```
 7. Whenever you want to add a new config file to the repo. Add using the commands below.
 ```bash
