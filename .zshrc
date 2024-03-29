@@ -110,3 +110,4 @@ alias dotgit='git --git-dir=/home/mrdonlee/dotfiles/ --work-tree=/home/mrdonlee'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+source ~/powerlevel10k/powerlevel10k.zsh-theme
