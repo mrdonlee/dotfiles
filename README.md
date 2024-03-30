@@ -17,12 +17,13 @@ This was inspired by **Greg Owen**'s [post](https://stegosaurusdormant.com/bare-
 To download and use the dotfiles, follow the steps below.
 
 1. Clone the repo into you system as a bare repository. You will also need a non-bare repository for the dotfiles.
-```bash
-git clone --separate-git-dir=$HOME/dotfiles https://gitlab.com/mrdonlee/dotfiles.git temp-files
-```
 If using SSH (recommended)
 ```bash
 git clone --separate-git-dir=$HOME/dotfiles git@gitlab.com:mrdonlee/dotfiles.git temp-files
+```
+If using HTTP
+```bash
+git clone --separate-git-dir=$HOME/dotfiles https://gitlab.com/mrdonlee/dotfiles.git temp-files
 ```
 2. Copy the dotfiles from `temp-files` directory to`$HOME` directory.
 ```bash
@@ -41,12 +42,13 @@ alias dotgit='git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 dotgit config status.showUntrackedFiles no
 ```
 6. Setup a remote repo to sync dotfiles.
-```bash
-dotgit remote add gitlab https://gitlab.com/mrdonlee/dotfiles.git
-```
 If using SSH (recommended)
 ```bash
 dotgit remote add gitlab git@gitlab.com:mrdonlee/dotfiles.git
+```
+If using HTTP
+```bash
+dotgit remote add gitlab https://gitlab.com/mrdonlee/dotfiles.git
 ```
 7. Whenever you want to add a new config file to the repo. Add using the commands below.
 ```bash
