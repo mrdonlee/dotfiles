@@ -17,11 +17,11 @@ This was inspired by **Greg Owen**'s [post](https://stegosaurusdormant.com/bare-
 To download and use the dotfiles, follow the steps below.
 
 1. Clone the repo into you system as a bare repository. You will also need a non-bare repository for the dotfiles.\
-If using SSH (recommended)
+If using SSH (recommended)\
 ```bash
 git clone --separate-git-dir=$HOME/dotfiles git@gitlab.com:mrdonlee/dotfiles.git temp-files
 ```
-If using HTTP
+If using HTTP\
 ```bash
 git clone --separate-git-dir=$HOME/dotfiles https://gitlab.com/mrdonlee/dotfiles.git temp-files
 ```
