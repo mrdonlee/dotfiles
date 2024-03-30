@@ -16,7 +16,7 @@ This was inspired by **Greg Owen**'s [post](https://stegosaurusdormant.com/bare-
 
 To download and use the dotfiles, follow the steps below.
 
-1. Clone the repo into you system as a bare repository. You will also need a non-bare repository for the dotfiles.\\
+1. Clone the repo into you system as a bare repository. You will also need a non-bare repository for the dotfiles.\
 If using SSH (recommended)
 ```bash
 git clone --separate-git-dir=$HOME/dotfiles git@gitlab.com:mrdonlee/dotfiles.git temp-files
@@ -41,7 +41,7 @@ alias dotgit='git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 ```bash
 dotgit config status.showUntrackedFiles no
 ```
-6. Setup a remote repo to sync dotfiles.\\
+6. Setup a remote repo to sync dotfiles.\
 If using SSH (recommended)
 ```bash
 dotgit remote add gitlab git@gitlab.com:mrdonlee/dotfiles.git
