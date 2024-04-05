@@ -8,26 +8,27 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'scrooloose/nerdtree'
-Plug 'tsony-tsonev/nerdtree-git-plugin'
-"Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-Plug 'ryanoasis/vim-devicons'
-Plug 'airblade/vim-gitgutter'
-Plug 'ctrlpvim/ctrlp.vim' " fuzzy find files
-Plug 'scrooloose/nerdcommenter'
-"Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+    "Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'scrooloose/nerdtree'
+    Plug 'tsony-tsonev/nerdtree-git-plugin'
+    "Plug 'Xuyuanp/nerdtree-git-plugin'
+    Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+    Plug 'ryanoasis/vim-devicons'
+    Plug 'airblade/vim-gitgutter'
+    Plug 'ctrlpvim/ctrlp.vim' " fuzzy find files
+    Plug 'scrooloose/nerdcommenter'
+    "Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 
-Plug 'christoomey/vim-tmux-navigator'
+    Plug 'christoomey/vim-tmux-navigator'
 
-Plug 'morhetz/gruvbox'
+    Plug 'morhetz/gruvbox'
+    Plug 'catppuccin/vim', { 'as': 'catppuccin' }
 
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+    Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
 
-Plug 'HerringtonDarkholme/yats.vim' " TS Syntax
-Plug 'kristijanhusak/vim-carbon-now-sh' "Share code snippets
+    Plug 'HerringtonDarkholme/yats.vim' " TS Syntax
+    Plug 'kristijanhusak/vim-carbon-now-sh' "Share code snippets
 
 " Initialize plugin system
 call plug#end()
@@ -46,7 +47,9 @@ set splitbelow
 " always uses spaces instead of tab characters
 set expandtab
 set background=dark
-colorscheme gruvbox
+set termguicolors
+filetype plugin indent on
+colorscheme catppuccin_mocha
 
 let NERDTreeShowHidden=0
 
