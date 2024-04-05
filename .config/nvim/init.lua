@@ -134,6 +134,9 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   pattern = '*',
 })
 
+-- [[ Open Lazygit ]]
+vim.keymap.set('n', '<leader>lg', ":FloatermNew --height=47 --width=166 lazygit<CR>", { desc = 'Open lazygit' })
+
 -- [[ Configure Telescope ]]
 -- See `:help telescope` and `:help telescope.setup()`
 require('telescope').setup {

@@ -89,10 +89,6 @@ return {
   },
 
   {
-    'github/copilot.vim',
-  },
-
-  {
     -- Add indentation guides even on blank lines
     'lukas-reineke/indent-blankline.nvim',
     -- Enable `lukas-reineke/indent-blankline.nvim`
@@ -147,4 +143,7 @@ return {
   --
   --    For additional information see: https://github.com/folke/lazy.nvim#-structuring-your-plugins
   -- { import = 'custom.plugins' },
+
+  'github/copilot.vim',
+  'voldikss/vim-floaterm'
 }
