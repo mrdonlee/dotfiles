@@ -8,4 +8,7 @@ return {
   config = function()
     require("nvim-tree").setup {}
   end,
+  keys = {
+    { "<C-n>", "<cmd>NvimTreeToggle<cr>", desc = "NvimTreeToggle" }
+  }
 }
