@@ -53,6 +53,6 @@ dotgit remote add gitlab https://gitlab.com/mrdonlee/dotfiles.git
 7. Whenever you want to add a new config file to the repo. Add using the commands below.
 ```bash
 dotgit add ~/.gitconfig
-dotgit commit -m "Git dotfiles"
-dotgit push gitlab main
+dotgit commit -m "feat: add git dotfiles"
+dotgit push
 ```
