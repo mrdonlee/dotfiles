@@ -116,12 +116,12 @@ if ! shopt -oq posix; then
   fi
 fi
 
-function _update_ps1() {
-    PS1=$(powerline-shell $?)
-}
+# Custom aliases and functions
+alias dotgit='git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 
-if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
-    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
-fi
+# vi mode
+set -o vi
 
-alias dotgit='git --git-dir=/home/mrdonlee/dotfiles/ --work-tree=/home/mrdonlee'
+. "$HOME/.cargo/env"
+
+. "$HOME/.local/bin/env"
