@@ -1,0 +1,22 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "theme": "catppuccin",
+  "provider": {
+    "ollama": {
+      "npm": "@ai-sdk/openai-compatible",
+      "options": {
+        "baseURL": "http://localhost:11434/v1"
+      },
+      "models": {
+        "llama2": {}
+      }
+    }
+  },
+  "model": "",
+  "autoshare": false,
+  "autoupdate": true,
+  "mode": {
+    "build": { },
+    "plan": { },
+  }
+}
