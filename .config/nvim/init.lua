@@ -15,4 +15,6 @@ end ---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup("plugins")
+
+-- [[ Core Configuration ]]
 require("core.options")
