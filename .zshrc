@@ -6,7 +6,7 @@ eval "$(starship init zsh)"
 autoload -U colors && colors
 
 # Aliases
-alias dgit='git --git-dir=$HOME/dotfiles --work-tree=$HOME'
+source "$HOME/.config/sh/aliases.sh"
 
 # Auto-completion
 autoload -Uz compinit
