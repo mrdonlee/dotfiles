@@ -7,6 +7,8 @@
     "build": { },
     "plan": { }
   },
+
+  // LLM Providers Configuration
   "provider": {
     "ollama": {
       "npm": "@ai-sdk/openai-compatible",
@@ -21,6 +23,8 @@
       }
     }
   },
+
+  // MCP Server Configuration
   "mcp": {
     "context7": {
       "type": "local",
@@ -28,11 +32,45 @@
       "enabled": true
     },
     "sequential-thinking": {
-      "command": "npx",
-      "args": [
+      "type": "local",
+      "command": [
+       "npx",
         "-y",
         "@modelcontextprotocol/server-sequential-thinking"
       ]
+    }
+  },
+
+  // Agents Configuration
+  "agent": {
+    "build": {
+      "mode": "primary",
+      "model": "anthropic/claude-sonnet-4-20250514",
+      "prompt": "",
+      "tools": {
+        "write": true,
+        "edit": true,
+        "bash": true
+      }
+    },
+    "plan": {
+      "mode": "primary",
+      "model": "",
+      "tools": {
+        "write": false,
+        "edit": false,
+        "bash": false
+      }
+    },
+    "code-reviewer": {
+      "description": "Reviews code for best practices and potential issues",
+      "mode": "subagent",
+      "model": "",
+      "prompt": "You are a code reviewer. Focus on security, performance, and maintainability.",
+      "tools": {
+        "write": false,
+        "edit": false
+      }
     }
   }
 }
