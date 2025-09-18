@@ -3,31 +3,6 @@
   "theme": "catppuccin",
   "autoshare": false,
   "autoupdate": true,
-  "agent": {
-    "build": {
-      "temperature": 0.1,
-      "tools": {
-        "write": false,
-        "edit": false,
-        "bash": false,
-        "read": true,
-        "grep": true,
-        "glob": true
-      }
-    },
-    "plan": {
-      "temperature": 0.1,
-      "prompt": "{file:./prompts/analysis.txt}"
-    }
-  },
-  "instructions": [
-    "CONTRIBUTING.md",
-    "docs/guidelines.md",
-    ".cursor/rules/*.md",
-    "docs/development-standards.md",
-    "test/testing-guidelines.md",
-    "packages/*/AGENTS.md"
-  ],
 
   // LLM Providers Configuration
   "provider": {
@@ -62,21 +37,26 @@
     }
   },
 
-  // Agents Configuration
+  // Agents and Rules Configuration
   "agent": {
     "build": {
       "mode": "primary",
       "model": "anthropic/claude-sonnet-4-20250514",
       "prompt": "",
+      "temperature": 0.1,
       "tools": {
-        "write": true,
-        "edit": true,
-        "bash": true
+        "write": false,
+        "edit": false,
+        "bash": false,
+        "read": true,
+        "grep": true,
+        "glob": true
       }
     },
     "plan": {
       "mode": "primary",
       "model": "",
+      "prompt": "{file:./prompts/analysis.txt}",
       "tools": {
         "write": false,
         "edit": false,
@@ -92,6 +72,20 @@
         "write": false,
         "edit": false
       }
+    },
+    "deep-thinker": {
+      "description": "Agent that uses high reasoning effort for complex problems",
+      "model": "openai/gpt-5",
+      "reasoningEffort": "high",
+      "textVerbosity": "low"
     }
-  }
+  },
+  "instructions": [
+    "CONTRIBUTING.md",
+    "docs/guidelines.md",
+    ".cursor/rules/*.md",
+    "docs/development-standards.md",
+    "test/testing-guidelines.md",
+    "packages/*/AGENTS.md"
+  ],
 }
