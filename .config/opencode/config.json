@@ -3,10 +3,31 @@
   "theme": "catppuccin",
   "autoshare": false,
   "autoupdate": true,
-  "mode": {
-    "build": { },
-    "plan": { }
+  "agent": {
+    "build": {
+      "temperature": 0.1,
+      "tools": {
+        "write": false,
+        "edit": false,
+        "bash": false,
+        "read": true,
+        "grep": true,
+        "glob": true
+      }
+    },
+    "plan": {
+      "temperature": 0.1,
+      "prompt": "{file:./prompts/analysis.txt}"
+    }
   },
+  "instructions": [
+    "CONTRIBUTING.md",
+    "docs/guidelines.md",
+    ".cursor/rules/*.md",
+    "docs/development-standards.md",
+    "test/testing-guidelines.md",
+    "packages/*/AGENTS.md"
+  ],
 
   // LLM Providers Configuration
   "provider": {
