@@ -41,7 +41,7 @@
   "agent": {
     "build": {
       "mode": "primary",
-      "model": "anthropic/claude-sonnet-4-20250514",
+      "model": "opencode/grok-code",
       "prompt": "",
       "temperature": 0.1,
       "tools": {
@@ -50,17 +50,34 @@
         "bash": false,
         "read": true,
         "grep": true,
-        "glob": true
+        "glob": true,
+        "context7": true
       }
     },
     "plan": {
       "mode": "primary",
-      "model": "",
+      "model": "google/gemini-2.5-flash",
       "prompt": "{file:./prompts/analysis.txt}",
       "tools": {
         "write": false,
         "edit": false,
-        "bash": false
+        "bash": false,
+        "sequential-thinking": true
+      }
+    },
+    "general": {
+      "description": "General purpose agent for various tasks",
+      "mode": "primary",
+      "model": "openai/gpt-4-turbo",
+      "prompt": "",
+      "tools": {
+        "write": false,
+        "edit": false,
+        "bash": false,
+        "read": false,
+        "grep": false,
+        "glob": false,
+        "context7": true
       }
     },
     "code-reviewer": {
