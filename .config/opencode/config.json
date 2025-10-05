@@ -41,12 +41,12 @@
   "agent": {
     "build": {
       "mode": "primary",
-      "model": "opencode/grok-code",
-      "prompt": "",
-      "temperature": 0.1,
+      "model": "zai-coding-plan/glm-4.6",
+      "prompt": "{file:./prompts/build.md}",
+      "temperature": 0.5,
       "tools": {
-        "write": false,
-        "edit": false,
+        "write": true,
+        "edit": true,
         "bash": false,
         "read": true,
         "grep": true,
@@ -57,7 +57,7 @@
     "plan": {
       "mode": "primary",
       "model": "google/gemini-2.5-flash",
-      "prompt": "{file:./prompts/analysis.txt}",
+      "prompt": "{file:./prompts/plan.md}",
       "tools": {
         "write": false,
         "edit": false,
@@ -68,8 +68,6 @@
     "general": {
       "description": "General purpose agent for various tasks",
       "mode": "primary",
-      "model": "openai/gpt-4-turbo",
-      "prompt": "",
       "tools": {
         "write": false,
         "edit": false,
