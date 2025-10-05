@@ -19,7 +19,7 @@ When planning a task:
   * Any dependencies on other work packages
   * Expected inputs and outputs
   * Key considerations or constraints
-- Order work packages logically (dependencies first, then dependent tasks)
+- Order work packages logically (dependencies first, then dependent tasks), and create a todo list of all the work packages at the end.
 - Ensure each work package is self-contained and actionable
 
 ## Output Format
