@@ -7,12 +7,27 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "edit_predictions": {
+    "provider": "zed",
+  },
   "show_edit_predictions": false,
   "language_models": {
     "openai_compatible": {
       "Z.ai": {
         "api_url": "https://api.z.ai/api/coding/paas/v4",
         "available_models": [
+          {
+            "name": "glm-4.7",
+            "max_tokens": 200000,
+            "max_output_tokens": 32000,
+            "max_completion_tokens": 200000,
+            "capabilities": {
+              "tools": true,
+              "images": false,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": false,
+            },
+          },
           {
             "name": "glm-4.6",
             "max_tokens": 200000,
@@ -22,20 +37,8 @@
               "tools": true,
               "images": false,
               "parallel_tool_calls": false,
-              "prompt_cache_key": false
-            }
-          },
-          {
-            "name": "glm-4.5",
-            "max_tokens": 200000,
-            "max_output_tokens": 32000,
-            "max_completion_tokens": 200000,
-            "capabilities": {
-              "tools": true,
-              "images": false,
-              "parallel_tool_calls": false,
-              "prompt_cache_key": false
-            }
+              "prompt_cache_key": false,
+            },
           },
           {
             "name": "glm-4.5-air",
@@ -46,15 +49,12 @@
               "tools": true,
               "images": false,
               "parallel_tool_calls": false,
-              "prompt_cache_key": false
-            }
-          }
-        ]
-      }
-    }
-  },
-  "features": {
-    "edit_prediction_provider": "zed"
+              "prompt_cache_key": false,
+            },
+          },
+        ],
+      },
+    },
   },
   "agent": {
     "profiles": {
@@ -71,24 +71,24 @@
           "open": true,
           "grep": true,
           "thinking": true,
-          "web_search": true
+          "web_search": true,
         },
         "enable_all_context_servers": false,
         "context_servers": {
           "Context7": {
             "tools": {
               "resolve-library-id": true,
-              "get-library-docs": true
-            }
-          }
-        }
-      }
+              "get-library-docs": true,
+            },
+          },
+        },
+      },
     },
     "default_profile": "write",
     "always_allow_tool_actions": true,
     "default_model": {
       "provider": "Z.ai",
-      "model": "glm-4.6"
+      "model": "glm-4.7",
     },
   },
   "ui_font_size": 16,
@@ -97,10 +97,10 @@
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "Catppuccin Mocha"
+    "dark": "Catppuccin Mocha",
   },
   "terminal": {
-    "font_family": "MesloLGS NF"
+    "font_family": "MesloLGS NF",
   },
   "vim_mode": true,
   "minimap": { "show": "always" },
@@ -108,13 +108,13 @@
     "Context7": {
       "command": "npx",
       "args": ["-y", "@upstash/context7-mcp@latest"],
-      "settings": {}
+      "settings": {},
     },
     "browser-tools-context-server": {
       "settings": {
         "port": 3025,
-        "host": "127.0.0.1"
-      }
-    }
-  }
+        "host": "127.0.0.1",
+      },
+    },
+  },
 }
