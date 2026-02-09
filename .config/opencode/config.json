@@ -27,10 +27,18 @@
       "command": ["npx", "-y", "@upstash/context7-mcp"],
       "enabled": true
     },
+    "shadcn": {
+      "type": "local",
+      "command": [
+        "npx",
+        "shadcn@latest",
+        "mcp"
+      ]
+    },
     "sequential-thinking": {
       "type": "local",
       "command": [
-       "npx",
+        "npx",
         "-y",
         "@modelcontextprotocol/server-sequential-thinking"
       ]
