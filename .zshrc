@@ -5,8 +5,9 @@ eval "$(starship init zsh)"
 # Enable syntax highlighting
 autoload -U colors && colors
 
-# Aliases
+# Shell options
 source "$HOME/.config/sh/aliases.sh"
+. "$HOME/.config/sh/env.sh"
 
 # Auto-completion
 autoload -Uz compinit
