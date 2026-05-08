@@ -49,7 +49,7 @@
   "agent": {
     "build": {
       "mode": "primary",
-      "model": "zai-coding-plan/glm-4.6",
+      "model": "zai-coding-plan/glm-4.7",
       "prompt": "{file:./prompts/build.md}",
       "temperature": 0.5,
       "tools": {
