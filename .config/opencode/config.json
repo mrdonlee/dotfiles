@@ -52,38 +52,39 @@
       "model": "zai-coding-plan/glm-4.7",
       "prompt": "{file:./prompts/build.md}",
       "temperature": 0.5,
-      "tools": {
-        "write": true,
-        "edit": true,
-        "bash": false,
-        "read": true,
-        "grep": true,
-        "glob": true,
-        "context7": true
+      "permission": {
+        "write": "allow",
+        "edit": "allow",
+        "bash": "deny",
+        "read": "allow",
+        "grep": "allow",
+        "glob": "allow",
+        "skill": "allow",
+        "context7": "allow"
       }
     },
     "plan": {
       "mode": "primary",
       "model": "google/gemini-2.5-flash",
       "prompt": "{file:./prompts/plan.md}",
-      "tools": {
-        "write": false,
-        "edit": false,
-        "bash": false,
-        "sequential-thinking": true
+      "permission": {
+        "write": "deny",
+        "edit": "deny",
+        "bash": "deny",
+        "sequential-thinking": "allow"
       }
     },
     "general": {
       "description": "General purpose agent for various tasks",
       "mode": "primary",
-      "tools": {
-        "write": false,
-        "edit": false,
-        "bash": false,
-        "read": false,
-        "grep": false,
-        "glob": false,
-        "context7": true
+      "permission": {
+        "write": "deny",
+        "edit": "deny",
+        "bash": "deny",
+        "read": "deny",
+        "grep": "deny",
+        "glob": "deny",
+        "context7": "allow"
       }
     },
     "code-reviewer": {
@@ -91,9 +92,9 @@
       "mode": "subagent",
       "model": "",
       "prompt": "You are a code reviewer. Focus on security, performance, and maintainability.",
-      "tools": {
-        "write": false,
-        "edit": false
+      "permission": {
+        "write": "deny",
+        "edit": "deny"
       }
     },
     "deep-thinker": {
