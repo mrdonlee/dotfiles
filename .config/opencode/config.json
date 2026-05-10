@@ -4,6 +4,14 @@
   "autoshare": false,
   "autoupdate": true,
 
+  // Global Permissions Configuration
+  "permission": {
+    "edit": "deny",
+    "bash": "ask",
+    "webfetch": "allow",
+    "context7": "allow"
+  },
+
   // LLM Providers Configuration
   "provider": {
     "ollama": {
