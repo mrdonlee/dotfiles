@@ -6,3 +6,8 @@ alias l='ls -CF'
 # fzf aliases
 alias f='fzf --preview "bat --style=numbers --color=always {}"'
 alias edit='fzf --preview "bat --style=numbers --color=always {}" | xargs -r $EDITOR'
+
+alias cd='z'
+alias cdi='zi'
+
+alias lg='lazygit'
