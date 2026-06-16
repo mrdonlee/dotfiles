@@ -1,11 +1,11 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "theme": "catppuccin",
   "autoshare": false,
   "autoupdate": true,
 
   // Global Permissions Configuration
   "permission": {
+    "skill": { "*": "allow" },
     "edit": "deny",
     "bash": "ask",
     "webfetch": "allow",
