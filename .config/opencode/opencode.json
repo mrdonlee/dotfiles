@@ -82,7 +82,7 @@
         "sequential-thinking": "allow"
       }
     },
-    "general": {
+    "chat": {
       "description": "General purpose agent for various tasks",
       "mode": "primary",
       "permission": {
