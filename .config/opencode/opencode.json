@@ -54,7 +54,7 @@
     }
   },
 
-  // Agents and Rules Configuration
+  // Agents Configuration
   "agent": {
     "build": {
       "mode": "primary",
@@ -113,6 +113,8 @@
       "textVerbosity": "low"
     }
   },
+
+  // Rules Configuration
   "instructions": [
     "CONTRIBUTING.md",
     "docs/guidelines.md",
@@ -120,5 +122,5 @@
     "docs/development-standards.md",
     "test/testing-guidelines.md",
     "packages/*/AGENTS.md"
-  ],
+  ]
 }
