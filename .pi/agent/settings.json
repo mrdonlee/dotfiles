@@ -1,0 +1,10 @@
+{
+  "lastChangelogVersion": "0.83.0",
+  "theme": "dark",
+  "defaultProvider": "zai-coding-cn",
+  "defaultModel": "glm-5.1",
+  "defaultThinkingLevel": "medium",
+  "packages": [
+    "npm:pi-mcp-adapter"
+  ]
+}
