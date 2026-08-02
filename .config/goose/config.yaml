@@ -17,6 +17,16 @@ providers:
 
 active_provider: zai
 
+slash_commands:
+- command: research_codebase
+  recipe_path: recipes/rpi-codebase-research.yaml
+- command: create_plan
+  recipe_path: recipes/rpi-plan.yaml
+- command: implement_plan
+  recipe_path: recipes/rpi-implement.yaml
+- command: iterate_plan
+  recipe_path: recipes/rpi-iterate.yaml
+
 extensions:
   autovisualiser:
     enabled: false
