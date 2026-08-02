@@ -1,5 +1,5 @@
 OLLAMA_HOST: localhost:11434
-GOOSE_MODE: chat
+GOOSE_MODE: smart_approve
 GOOSE_AUTO_COMPACT_THRESHOLD: 0.8
 GOOSE_TELEMETRY_ENABLED: false
 ZAI_BASE_URL: https://api.z.ai/api/anthropic
