@@ -1,6 +1,7 @@
 source <(fzf --zsh)
 
 eval "$(starship init zsh)"
+eval "$(mise activate zsh)"
 
 # Enable syntax highlighting
 autoload -U colors && colors
