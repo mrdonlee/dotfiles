@@ -1,5 +1,5 @@
 {
-  "lastChangelogVersion": "0.87.1",
+  "lastChangelogVersion": "1.1.0",
   "theme": "dark",
   "defaultProvider": "zai-coding-cn",
   "defaultModel": "glm-5.1",
@@ -14,5 +14,8 @@
     "npm:@plannotator/pi-extension",
     "npm:@narumitw/pi-goal",
     "npm:@quintinshaw/pi-dynamic-workflows"
+  ],
+  "extensions": [
+    "-builtin:mcp"
   ]
 }
